@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Déclaration de l'encodage des caractères pour permettre l'affichage des caractères spéciaux -->
+    <meta charset="UTF-8">
+    <!-- Configuration pour un affichage adapté sur tous les écrans, notamment les mobiles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titre affiché dans l'onglet du navigateur -->
+    <title>Exposition Picasso</title>
+    <!-- Intégration de Bootstrap pour des styles préconçus -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fichier CSS personnalisé -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark text-white">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container d-flex align-items-center">
+                <!-- Logo et titre du musée -->
+                <!-- Logo SVG (image vectorielle) pour identifier visuellement le site -->
+                <a href="index.html" class="d-flex align-items-center link-body-emphasis text-decoration-none me-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="32" fill="currentColor"
+                        class="bi bi-bank" viewBox="0 0 16 16">
+                        <path
+                            d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.5.5 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89zM3.777 3h8.447L8 1zM2 6v7h1V6zm2 0v7h2.5V6zm3.5 0v7h1V6zm2 0v7H12V6zM13 6v7h1V6zm2-1V4H1v1zm-.39 9H1.39l-.25 1h13.72z" />
+                    </svg>
+                    <span class="fs-5 fw-bold">Musée de Fauré</span>
+                </a>
+
+                <!-- Menu de navigation -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <!-- Chaque élément du menu représente une page importante -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="oeuvres.html">Les œuvres</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="a-propos.html">À propos de Picasso</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="informations.html">Informations pratiques</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tarifs.php">Tarifs</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Bouton de bascule pour les écrans mobiles -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Basculer la navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-4">
+        <!-- Titre principal de la page -->
+        <center>
+            <h1 class="text-white highlight">Bienvenue à l'exposition Picasso</h1>
+        </center>
+
+        <br>
+
+        <!-- Bloc de citation pour une présentation succincte de Picasso -->
+        <blockquote class="blockquote">
+            <p>Pablo Picasso est un artiste espagnol né à Malaga, le 25 octobre 1881 et décédé le 8 avril 1973 en France
+                Cet artiste de renom international est connu pour avoir passé. l'essentiel de sa vie en France mais
+                surtout pour avoir utilisé tous les supports pour son travail et avoir contribué de manière
+                significative à de nombreux mouvements artistiques du XXème siècle.</p>
+            <footer class="blockquote-footer">Présentation de Picasso</footer>
+        </blockquote>
+
+        <br>
+
+        <!-- Texte incitant à découvrir l'exposition -->
+        <p class="lead highlight">Découvrez l'univers fascinant de Pablo Picasso et ses liens avec l'animation.</p>
+
+        <!-- Carrousel d'images pour présenter des œuvres -->
+        <div id="carouselExample" class="carousel slide carousel-container" data-bs-ride="carousel"
+            data-bs-interval="5000">
+            <div class="carousel-inner">
+                <!-- Première image (active par défaut) -->
+                <div class="carousel-item active">
+                    <img src="images/Les-Demoiselles-d-Avignon.jpg" alt="tableau 1 Les-Demoiselles-d-Avignon"
+                        width="100%" height="850">
+                </div>
+                <!-- Deuxième image -->
+                <div class="carousel-item">
+                    <img src="images/Femme-asise.jpeg" alt="tableau 2 Femme-asise" width="100%" height="850">
+                </div>
+                <!-- Troisième image -->
+                <div class="carousel-item">
+                    <img src="images/Jeune-fille-devant-un-miroir.jpg" alt="tableau 3 Le-Baiser" width="100%"
+                        height="850">
+                </div>
+            </div>
+            <!-- Bouton pour passer à l'image précédente -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Précédent</span>
+            </button>
+            <!-- Bouton pour passer à l'image suivante -->
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Suivant</span>
+            </button>
+        </div>
+
+        <br></br>
+
+        <!-- Deuxième bloc de citation pour mettre en valeur l'importance de l'exposition -->
+        <blockquote class="blockquote">
+            <p>"L'exposition <a href="https://barnies.fr/pablo-picasso/"
+                    style="text-decoration: none; color: #1084f0;">Picasso</a> au musée du film d'animation est une
+                opportunité unique de découvrir les liens fascinants entre l'art de Picasso et l'animation. Ses œuvres,
+                avec leurs formes audacieuses et leurs perspectives multiples, ont inspiré de nombreux animateurs et
+                suivent d'influencer l'art du mouvement. Cette exposition nous permet de voir comment les idées
+                révolutionnaires de Picasso sur la représentation visuelle ont un écho dans le monde dynamique de
+                l'animation."</p>
+            <footer class="blockquote-footer">Le commissaire de l'exposition</footer>
+        </blockquote>
+    </main>
+
+    <br></br>
+
+    <!-- Script JavaScript pour activer les fonctionnalités Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<footer class="footer text-white py-3">
+    <!-- Pied de page avec mention des droits d'auteur -->
+    <div class="container">
+        <div class="text-center mt-3">
+            <p class="small highlight">&copy; 2024 Musée Picasso. Tous droits réservés.</p>
+        </div>
+    </div>
+</footer>
+
+</html>

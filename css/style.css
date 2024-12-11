@@ -1,0 +1,152 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    color: #333;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+}
+
+.card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.blockquote {
+    border-left: 5px solid #007bff;
+    padding-left: 1rem;
+}
+
+.box {
+    background-color: #333;
+}
+
+.Logo {
+    font-size: 20px;
+}
+
+.navbar-nav {
+    margin-left: 120px;
+    /* Décalage vers la gauche pour rapprocher les boutons du logo */
+}
+
+.card-img-top {
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+.navbar-nav .nav-link:hover {
+    text-decoration: underline;
+    /* Effet discret au survol */
+    color: #1084f0;
+    /* Met en avant avec une couleur bleue */
+    text-decoration: none;
+}
+
+.highlight {
+    color: #dadada;
+    /* Couleur du texte */
+    font-weight: bold;
+    border-bottom: 3px solid #1084f0;
+    /* Soulignement bleu */
+    padding-bottom: 5px;
+    /* Espacement avec le soulignement */
+    display: inline-block;
+    /* Nécessaire pour que la bordure fonctionne correctement */
+}
+
+.footer {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #20202057;
+    /* Fond plus sombre */
+    color: #dadada;
+    /* Texte clair */
+    margin-top: auto;
+    /* Pour que le footer soit poussé vers le bas */
+}
+
+/* Appliquer un fond sombre pour le tableau avec Bootstrap */
+.table-dark {
+    background-color: #343a40;
+    /* Fond sombre pour le tableau */
+    color: #fff;
+    /* Texte blanc */
+    border: none;
+    /* Enlever les bordures par défaut */
+}
+
+/* En-tête du tableau avec un fond plus sombre */
+.table-dark thead {
+    background-color: #212529;
+    /* Fond encore plus sombre pour l'en-tête */
+}
+
+/* Style pour les cellules de tableau */
+.table-dark th,
+.table-dark td {
+    padding: 12px;
+    /* Espacement des cellules */
+    text-align: left;
+    /* Alignement du texte à gauche */
+    border-bottom: 1px solid #444;
+    /* Bordures grises entre les lignes */
+}
+
+/* Lignes impaires et paires avec des couleurs alternées */
+.table-dark tbody tr:nth-child(odd) {
+    background-color: #343a40;
+    /* Fond sombre pour les lignes impaires */
+}
+
+.table-dark tbody tr:nth-child(even) {
+    background-color: #2c3035;
+    /* Fond légèrement plus clair pour les lignes paires */
+}
+
+/* Changer la couleur au survol des lignes */
+.table-dark tbody tr:hover {
+    background-color: #495057;
+    /* Fond plus clair au survol */
+}
+
+/* Force le footer à rester en bas */
+html,
+body {
+    height: 100%;
+    /* Prendre toute la hauteur de la page */
+    margin: 0;
+    /* Enlever les marges par défaut */
+}
+
+/* Flexbox pour faire en sorte que le contenu prenne l'espace restant */
+body {
+    display: flex;
+    flex-direction: column;
+    /* Organisation en colonne */
+}
+
+/* Le contenu doit s'étendre pour occuper l'espace restant */
+.content {
+    flex: 1;
+    /* Prendre toute la place restante */
+}
+
+/* Style du footer */
+.footer {
+    background-color: #2e2e2e8c;
+    /* Fond sombre pour le footer */
+    color: #dadada;
+    /* Texte clair */
+    text-align: center;
+}

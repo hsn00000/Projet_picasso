@@ -13,12 +13,21 @@ try {
 }
 
 // Requête pour récupérer les catégories et tarifs
-$query = "SELECT c.libelle AS categorie, t.prix AS tarif 
+$query = "SELECT c.id, c.libelle AS categorie, t.prix AS tarif 
           FROM categorie c 
           LEFT JOIN tarifs t ON c.id = t.id";
-
 $stmt = $pdo->query($query);
 $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Calcul du tarif total si le formulaire est soumis
+$total = 0;
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    foreach ($data as $row) {
+        $id = $row['id'];
+        $quantite = isset($_POST["quantite_$id"]) ? intval($_POST["quantite_$id"]) : 0;
+        $total += $quantite * $row['tarif'];
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -95,22 +104,35 @@ $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <p class="light text-white">Retrouvez ci-dessous nos tarifs détaillés présentés sous forme de tableau, afin de
             vous
             permettre de choisir facilement l'option qui correspond le mieux à votre profil et à vos besoins:</p>
-        <table class="table table-dark table-striped">
-            <thead>
-                <tr>
-                    <th>Catégories</th>
-                    <th>Tarifs</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($data as $row): ?>
+        <form method="post" action="">
+            <table class="table table-dark table-striped">
+                <thead>
                     <tr>
-                        <td><?= htmlspecialchars($row['categorie']) ?></td>
-                        <td><?= htmlspecialchars($row['tarif']) ?> €</td>
+                        <th>Catégories</th>
+                        <th>Tarifs</th>
+                        <th>Quantité</th>
                     </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    <?php foreach ($data as $row): ?>
+                        <tr>
+                            <td><?= htmlspecialchars($row['categorie']) ?></td>
+                            <td><?= htmlspecialchars($row['tarif']) ?> €</td>
+                            <td>
+                                <input type="number" name="quantite_<?= $row['id'] ?>" min="0" value="0" class="form-control">
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+            <button type="submit" class="btn btn-primary">Calculer le total</button>
+        </form>
+
+        <?php if ($_SERVER['REQUEST_METHOD'] === 'POST'): ?>
+            <div class="alert alert-success mt-3">
+                <strong>Tarif total : </strong> <?= htmlspecialchars($total) ?> €
+            </div>
+        <?php endif; ?>
 
     </main>
 

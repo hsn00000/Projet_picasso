@@ -119,7 +119,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <td><?= htmlspecialchars($row['categorie']) ?></td>
                             <td><?= htmlspecialchars($row['tarif']) ?> €</td>
                             <td>
-                                <input type="number" name="quantite_<?= $row['id'] ?>" min="0" value="0" class="form-control">
+                                <input type="number" name="quantite_<?= $row['id'] ?>" min="0" value="0"
+                                    class="form-control">
                             </td>
                         </tr>
                     <?php endforeach; ?>

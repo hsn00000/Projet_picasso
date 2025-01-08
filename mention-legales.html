@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Déclaration de l'encodage des caractères pour permettre l'affichage des caractères spéciaux -->
+    <meta charset="UTF-8">
+    <!-- Configuration pour un affichage adapté sur tous les écrans, notamment les mobiles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titre affiché dans l'onglet du navigateur -->
+    <title>Exposition Picasso</title>
+    <!-- Intégration de Bootstrap pour des styles préconçus -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fichier CSS personnalisé -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark text-white">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container d-flex align-items-center">
+                <!-- Logo et titre du musée -->
+                <!-- Logo SVG (image vectorielle) pour identifier visuellement le site -->
+                <a href="index.html" class="d-flex align-items-center link-body-emphasis text-decoration-none me-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="32" fill="currentColor"
+                        class="bi bi-bank" viewBox="0 0 16 16">
+                        <path
+                            d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.5.5 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89zM3.777 3h8.447L8 1zM2 6v7h1V6zm2 0v7h2.5V6zm3.5 0v7h1V6zm2 0v7H12V6zM13 6v7h1V6zm2-1V4H1v1zm-.39 9H1.39l-.25 1h13.72z" />
+                    </svg>
+                    <span class="fs-5 fw-bold">Musée de Fauré</span>
+                </a>
+
+                <!-- Menu de navigation -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <!-- Chaque élément du menu représente une page importante -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="oeuvres.html">Les œuvres</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="a-propos.html">À propos de Picasso</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="informations.html">Informations pratiques</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tarifs.php">Tarifs</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Bouton de bascule pour les écrans mobiles -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Basculer la navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-4">
+        <!-- Titre principal de la page -->
+        <center>
+            <h1 class="text-white highlight">Mentions légales</h1>
+        </center>
+
+        <br>
+
+        <h2 class="text-white highlight">Éditeur du site</h2>
+        <p>
+            Nom de l'entreprise ou du responsable : Musée de Picasso<br>
+            Adresse : 2 avenue du Rhône, 74000 Annecy, France<br>
+            Téléphone : +33 (0)4 50 45 20 38<br>
+            Email : contact@museepicasso.fr<br>
+            Numéro SIRET : 123 456 789 00012
+        </p>
+
+        <br>
+
+        <h2 class="text-white highlight">Hébergeur du site</h2>
+        <p>
+            Nom : Monsef - Estban - Hasan<br>
+            Adresse : 2 avenue du Rhône, 74000 Annecy, France<br>
+            Téléphone : +33 (0)4 50 45 20 38<br>
+            Site web : <a href="index.html" target="_blank" style="text-decoration: none;">Picasso</a>
+        </p>
+
+        <br>
+
+        <h2 class="text-white highlight">Propriété intellectuelle</h2>
+        <p>
+            Le contenu (textes, images, illustrations) présent sur ce site est protégé par le droit d’auteur. Toute
+            reproduction, représentation, modification ou adaptation, totale ou partielle, sans autorisation préalable,
+            est strictement interdite.
+        </p>
+
+        <br>
+
+        <h2 class="text-white highlight">Responsabilité</h2>
+        <p>
+            Le Musée de Picasso s’efforce de garantir l’exactitude des informations diffusées sur le site. Toutefois,
+            des
+            erreurs ou omissions peuvent survenir.</a>.
+        </p>
+
+        <br>
+
+        <h2 class="text-white highlight">Cookies et données personnelles</h2>
+        <p>
+            Ce site utilise des cookies pour améliorer votre expérience. Aucune donnée personnelle n’est collectée sans
+            votre consentement. Pour plus d’informations, consultez notre <a
+                href="https://www.musee-orangerie.fr/fr/politique-de-confidentialite" style="text-decoration: none;">politique
+                de confidentialité</a>.
+        </p>
+
+        <br>
+
+    </main>
+</body>
+
+<footer class="footer text-white py-3">
+    <div class="container">
+        <div class="text-center mt-3">
+            <p class="small highlight">&copy; 2024 Musée de Picasso. Tous droits réservés.
+            </p>
+            <br>
+            <a href="mention-legales.html" title="Consultez les mentions légales"
+                style="text-decoration: none;">Mentions légales</a>
+        </div>
+    </div>
+</footer>
+
+</html>

@@ -138,13 +138,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
+
 </body>
 
 <footer class="footer text-white py-3">
     <div class="container">
-        <div class="text-center mt-3">
-            <p class="small highlight">&copy; 2024 Musée de Picasso. Tous droits réservés.</p>
+    <div class="text-center mt-3">
+            <p class="small highlight">&copy; 2024 Musée de Picasso. Tous droits réservés.
+            </p>
+            <br>
+            <a href="mention-legales.html" title="Consultez les mentions légales" style="text-decoration: none;">Mentions légales</a>
         </div>
     </div>
 </footer>
